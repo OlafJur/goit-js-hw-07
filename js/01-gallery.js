@@ -35,13 +35,8 @@ gallery.addEventListener("click", (e) => {
     const closeModalOnEscape = (event) => {
       if (event.key === "Escape") {
         modal.close();
+        document.addEventListener("keydown", closeModalOnEscape);
       }
     };
-
-    document.addEventListener("keydown", closeModalOnEscape);
-
-    modal.on("close", () => {
-      document.removeEventListener("keydown", closeModalOnEscape);
-    });
   }
 });

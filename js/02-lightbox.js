@@ -1,5 +1,4 @@
 import { galleryItems } from "./gallery-items.js";
-import SimpleLightbox from "simplelightbox";
 
 const gallery = document.querySelector(".gallery");
 
@@ -19,8 +18,4 @@ gallery.innerHTML = galleryHTML;
 const lightbox = new SimpleLightbox(".gallery__item", {
   captionsData: "alt",
   captionDelay: 250,
-});
-
-gallery.addEventListener("click", (e) => {
-  e.preventDefault();
 });
